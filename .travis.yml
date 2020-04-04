@@ -11,6 +11,7 @@ node_js:
   - v10
   - v8
 before_install:
+  - java -version
   # set up bluegenes
   - bash setup-bluegenes.sh
   # set up intermine
