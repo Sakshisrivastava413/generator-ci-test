@@ -1,0 +1,8 @@
+bluegenes
+/cypress/screenshots
+/cypress/plugins
+/cypress/videos
+/cypress/support
+/cypress/fixtures
+node_modules
+coverage

@@ -1,0 +1,25 @@
+language: node_js
+env:
+  global:
+  - TESTMODEL_URL=http://localhost:8080/intermine-demo
+  - TESTMODEL_PATH=intermine-demo
+sudo: true
+jdk:
+  - openjdk8
+node_js:
+  - v10
+  - v8
+before_install:
+  # set up bluegenes
+  - bash setup-bluegenes.sh
+  # set up intermine
+  - git clone https://github.com/intermine/testmine-ci.git
+  - bash testmine-ci/init-testmine.sh
+  # client dependencies
+  - npm install
+  - npm install -g yo
+  # install cypress dependencies
+  - sudo apt-get install xvfb libgtk2.0-0 libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 -y
+
+script:
+  - bash ci/travis.sh
