@@ -15,7 +15,7 @@ before_install:
   # set up intermine
   - git clone https://github.com/intermine/ci-scripts.git
   - cd ci-scripts
-  - bash ci-scripts/init-testmine.sh
+  - bash init-testmine.sh
   # client dependencies
   - npm install
   - npm install -g yo
