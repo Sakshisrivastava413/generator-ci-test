@@ -16,7 +16,8 @@ before_install:
   - bash setup-bluegenes.sh
   # set up intermine
   - git clone https://github.com/Sakshisrivastava413/ci-scripts.git
-  - bash ci-scripts/init-testmine.sh
+  - cd ci-scripts
+  - bash init-testmine.sh
   # client dependencies
   - npm install
   - npm install -g yo
